@@ -5,9 +5,14 @@ export function User() {
 
   return (
     <div>
-      {isLoading && <p>Loading...</p>}
-      <h2>User Page</h2>
-      <h3>Username: {user?.username}</h3>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <h2>User Page</h2>
+          <h3>Username: {user?.username}</h3>
+        </>
+      )}
     </div>
   );
 }
