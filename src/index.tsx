@@ -18,6 +18,7 @@ const store = configureStore({
 });
 
 const queryClient = new QueryClient();
+// initial spreado setup with redux store and react-query client
 const spreadoSetup = new SpreadoSetupForReduxReactQuery({ store, queryClient });
 
 const root = ReactDOM.createRoot(
