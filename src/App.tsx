@@ -30,11 +30,11 @@ function App() {
 
       <hr style={{ borderTop: "1px solid" }} />
 
-      <div style={{ display: page === Pages.Profile ? "" : "none" }}>
+      <div style={{ display: page === Pages.Profile ? "" : "none", color: 'green' }}>
         <Profile />
       </div>
       
-      <div style={{ display: page === Pages.User ? "" : "none" }}>
+      <div style={{ display: page === Pages.User ? "" : "none", color:'blue' }}>
         <User />
       </div>
     </div>
