@@ -1,11 +1,11 @@
 import { useUserQuerySpreadOut } from "./queries/useUserQuery";
 
 export function User() {
-  const { data: user, isLoading } = useUserQuerySpreadOut();
+  const { data: user, isFetching, refetch } = useUserQuerySpreadOut();
 
   return (
     <div>
-      {isLoading ? (
+      {isFetching ? (
         <p>Loading...</p>
       ) : (
         <>
@@ -13,6 +13,7 @@ export function User() {
           <h3>Username: {user?.username}</h3>
         </>
       )}
+      <button disabled={isFetching} onClick={() => refetch()} >Refetch</button>
     </div>
   );
 }
